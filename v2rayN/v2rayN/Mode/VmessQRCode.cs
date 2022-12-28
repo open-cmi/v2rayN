@@ -65,5 +65,9 @@ namespace v2rayN.Mode
         /// TLS alpn
         /// </summary>
         public string alpn { get; set; } = string.Empty;
+        /// <summary>
+        /// tls allow insecure
+        /// </summary>
+        public string allowInsecure { get; set; } = string.Empty;
     }
 }

@@ -77,7 +77,8 @@ namespace v2rayN.Handler
                 path = item.path,
                 tls = item.streamSecurity,
                 sni = item.sni,
-                alpn = Utils.List2String(item.alpn)
+                alpn = Utils.List2String(item.alpn),
+                allowInsecure = item.allowInsecure
             };
 
             url = Utils.ToJson(vmessQRCode);
@@ -416,6 +417,7 @@ namespace v2rayN.Handler
             vmessItem.streamSecurity = Utils.ToString(vmessQRCode.tls);
             vmessItem.sni = Utils.ToString(vmessQRCode.sni);
             vmessItem.alpn = Utils.String2List(vmessQRCode.alpn);
+            vmessItem.allowInsecure = Utils.ToString(vmessQRCode.allowInsecure);
 
             return vmessItem;
         }
